@@ -1,0 +1,20 @@
+{
+  "source": "./temp/**",
+  "run": [
+    {
+      "module": "@zup-it/ds-schema-plugins",
+      "plugins": [
+        {
+          "name": "backend",
+          "options": {
+            "sourceFolder": "src/main/kotlin/",
+            "packageName": "{{project_group_id}}.beagle.ds",
+            "typesPackage": "{{project_group_id}}.beagle.ds",
+            "componentsPackage": "{{project_group_id}}.beagle.ds",
+            "indentation": 4
+          }
+        }
+      ]
+    }
+  ]
+}

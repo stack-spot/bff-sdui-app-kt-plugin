@@ -1,0 +1,35 @@
+name: "bff-sdui-app-kt-plugin"
+description: Plugin to configure bff server driven ui
+types:
+  - app
+tags:
+  - bff
+  - beagle
+  - sdui
+  - server-driven-ui
+  - design-system
+  - ds-schema
+inputs:
+  - label: "Beagle version: "
+    name: "beagle_version"
+    type: text
+    default: "1.10.0"  
+  - label: "Serialization inclusion: "
+    type: text
+    name: "serialization_inclusion"
+    items:
+      - "ALWAYS"
+      - "NON_NULL"
+    default: "NON_NULL"
+  - label: "Do you want configure design system? "
+    type: bool
+    name: "configure_design_system"
+    default: "false"  
+  - label: "URL of the repository (SSH is recommended if it is private) with the component definitions: "
+    name: "url"
+    type: text
+    default: "git@github.com:Orangestack-com/uxservices-stackfront-design-system.git"
+    condition:
+      variable: "configure_design_system"
+      operator: "=="
+      value: true
